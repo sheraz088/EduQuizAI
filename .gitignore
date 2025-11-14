@@ -1,0 +1,96 @@
+###################################################
+# CRITICAL SECURITY EXCLUSIONS (DO NOT COMMIT SECRETS)
+###################################################
+# Environment variables and configuration files that contain API keys,
+# database credentials, or other secrets.
+.env
+.env.local
+.env.*.local
+config/secrets.json
+*.key
+*.pem
+
+###################################################
+# NODE.JS / REACT EXCLUSIONS
+###################################################
+# Dependencies
+/node_modules
+/jspm_packages
+
+# Build / Distribution artifacts
+/build
+/dist
+/out
+/coverage
+/public/build
+/public/dist
+
+# Logs and debug files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.npm
+.yarn-cache
+
+# Compilation cache
+*.tsbuildinfo
+
+# Note: package-lock.json and yarn.lock should usually NOT be ignored.
+
+###################################################
+# PYTHON EXCLUSIONS
+###################################################
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+/venv
+/env
+/ENV
+.venv
+
+# Distribution / Packaging
+.Python
+build/
+develop-eggs/
+dist/
+eggs/
+.eggs/
+*.egg-info/
+.installed.cfg
+*.manifest
+*.spec
+
+# Jupyter Notebook / IPython
+.ipynb_checkpoints
+
+###################################################
+# IDE & EDITOR EXCLUSIONS
+###################################################
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/
+
+# JetBrains (IntelliJ, PyCharm, WebStorm, etc.)
+.idea/
+
+###################################################
+# OS & SYSTEM EXCLUSIONS
+###################################################
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# macOS
+.DS_Store
+.Trashes
+
+# Linux
+*.swp

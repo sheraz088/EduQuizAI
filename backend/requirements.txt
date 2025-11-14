@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+python-multipart
+PyMuPDF
+python-docx
+python-pptx
+langchain
+langchain-groq
+fpdf
+uuid
+supabase-py-async
+prisma
+aiofiles
+PyPDF2
+python-dotenv

@@ -1,0 +1,66 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider        = "prisma-client-js"
+  output          = "../src/generated/prisma"
+  previewFeatures = []
+}
+
+generator py {
+  provider             = "prisma-client-py"
+  interface            = "asyncio"
+  recursive_type_depth = 5
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+// Core models only - simplified for SQLite
+model Quiz {
+  id                 String   @id @default(cuid())
+  title              String
+  description        String?
+  type               String // MCQ, DESCRIPTIVE
+  timeLimitMinutes   Int?
+  randomizeQuestions Boolean  @default(false)
+  isOnlineAttempt    Boolean  @default(false)
+  pdfUrl             String?
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+  creatorId          String
+
+  // Direct relations only
+  questions Question[]
+}
+
+model Question {
+  id        String   @id @default(cuid())
+  quizId    String
+  text      String
+  type      String // MCQ, DESCRIPTIVE
+  order     Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  quiz    Quiz     @relation(fields: [quizId], references: [id], onDelete: Cascade)
+  options Option[]
+}
+
+model Option {
+  id         String   @id @default(cuid())
+  questionId String
+  text       String
+  isCorrect  Boolean  @default(false)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  // Relations
+  question Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+}
