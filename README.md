@@ -1,3 +1,5 @@
+<img width="952" height="332" alt="Screenshot 2026-06-23 120022" src="https://github.com/user-attachments/assets/3654c0ec-59d1-41bd-8c7a-f2fbdb35ab60" />
+
 # Study Material Generator
 
 This project helps teachers and students generate study materials from existing documents. It can create quizzes, assignments, and summaries using AI.
