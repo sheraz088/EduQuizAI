@@ -20,6 +20,21 @@ This project helps teachers and students generate study materials from existing 
 - **Auth**: Supabase
 - **Database**: PostgreSQL
 
+## Screenshots
+
+Screenshot examples (results) are included in the `screenshots/` folder:
+
+![Result 2](screenshots/2.png)
+![Result 3](screenshots/3.png)
+![Result 2](screenshots/4.png)
+![Result 3](screenshots/5.png)
+![Result 2](screenshots/6.png)
+![Result 3](screenshots/7.png)
+![Result 2](screenshots/8.png)
+![Result 3](screenshots/9.png)
+![Result 1](screenshots/10.png)
+![Result 1](screenshots/11.png)
+
 ## Setup Instructions
 
 ### Prerequisites
